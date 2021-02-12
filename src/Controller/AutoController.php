@@ -40,7 +40,7 @@ class AutoController extends AbstractController
     }
 
     
-    public function index(LoggerInterface $logger): Response{           
+    public function index(): Response{                   
         $autoRepo = $this->getDoctrine()->getRepository(Auto::class);      
         $autos = $autoRepo->findAllAutosPropietarios();        
         return $this->resJson($autos);
