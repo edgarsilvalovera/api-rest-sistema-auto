@@ -1,0 +1,83 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+#Rutas Para AutoController
+auto:
+    path: /auto
+    controller: App\Controller\AutoController::searchAuto    
+    methods: [GET]  
+
+autoAll:
+    path: /auto/all
+    controller: App\Controller\AutoController::index    
+    methods: [GET]
+
+autoLogin:
+    path: /auto/login
+    controller: App\Controller\AutoController::login
+    methods: [POST]
+
+autoRegister:
+    path: /auto/register
+    controller: App\Controller\AutoController::create
+    methods: [POST]
+
+autoEdit:
+    path: /auto/edit/{id}
+    controller: App\Controller\AutoController::create
+    methods: [PUT]    
+
+autoDelete:
+    path: /auto/delete/{id}
+    controller: App\Controller\AutoController::delete
+    methods: [DELETE]        
+
+#Rutas Para PropietarioController
+propietario:    
+    path: /propietario
+    controller: App\Controller\PropietarioController::searchPropietario
+    methods: [GET]
+
+propietarioAll:    
+    path: /propietario/all
+    controller: App\Controller\PropietarioController::index
+    methods: [GET]    
+
+propietarioSearchAutos:    
+    path: /propietario/searchAutos/{id}
+    controller: App\Controller\PropietarioController::searchAutos
+    methods: [GET]    
+    
+propietarioRegister:    
+    path: /propietario/register
+    controller: App\Controller\PropietarioController::create 
+    methods: [POST]
+
+propietarioEdit:    
+    path: /propietario/edit/{id}
+    controller: App\Controller\PropietarioController::create     
+    methods: [PUT]
+
+propietarioDelete:    
+    path: /propietario/delete/{id}
+    controller: App\Controller\PropietarioController::delete     
+    methods: [DELETE]
+
+#Rutas Para ServicioController
+servicioAll:    
+    path: /servicio/all
+    controller: App\Controller\ServicioController::index
+    methods: [GET]    
+
+#Rutas Para TransaccionController
+transaccion:    
+    path: /transaccion/register
+    controller: App\Controller\TransaccionController::create 
+    methods: [POST]   
+    
+transaccionSearchAutoId:    
+    path: /transaccion/{autoId}
+    controller: App\Controller\TransaccionController::searchAutoId 
+    methods: [GET]    
+    
